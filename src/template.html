@@ -5,5 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weatharis</title>
   </head>
-  <body></body>
+  <body>
+    <div class="main-container">
+      <div class="search flex">
+        <div class="flex-column">
+          <input type="text" placeholder="London" />
+          <span class="error-message"></span>
+        </div>
+        <button><img src="assets/search.svg" alt="" /></button>
+        <div class="unit-group flex">
+          <button id="celsius">C°</button>
+          <button id="fahrenheit">F°</button>
+        </div>
+      </div>
+      <div class="weather-container">
+        <div class="weather-card main-info">
+          <div class="address"></div>
+          <div class="temperature flex">
+            <div class="current-temp"></div>
+            <div class="minmax-temp"></div>
+          </div>
+          <div class="date"></div>
+          <div class="description"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,3 +1,18 @@
+:root[data-theme="light"] {
+  --text: #070d13;
+  --background: #f0f5fa;
+  --primary: #5284c7;
+  --secondary: #c698dd;
+  --accent: #ca66cc;
+}
+:root[data-theme="dark"] {
+  --text: #ecf2f8;
+  --background: #050a0f;
+  --primary: #386bad;
+  --secondary: #502267;
+  --accent: #973399;
+}
+
 /* Josh Cameau's CSS reset*/
 /* 1. Use a more-intuitive box-sizing model */
 *,
@@ -66,4 +81,138 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #f1f5fa;
+  font-family: serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-container {
+  height: 100%;
+  display: grid;
+  grid-template: 1fr 6fr/1fr;
+  padding: 100px;
+}
+
+.search {
+  justify-content: center;
+  align-items: center;
+}
+
+.search input {
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  width: 100%;
+  border: none;
+  background-color: rgba(95, 95, 95, 0.2);
+  min-width: 160px;
+  margin-bottom: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search button {
+  background: none;
+  border: none;
+  min-width: max-content;
+}
+
+.search button:hover {
+  cursor: pointer;
+}
+
+.weather-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: minmax(500px, 650px);
+  padding: 3rem 20rem;
+  gap: 2rem;
+  min-width: max-content;
+  justify-content: center;
+}
+
+.weather-card {
+  background-color: rgba(168, 168, 168, 0.2);
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.error-message {
+  font-size: 0.8rem;
+  color: rgb(124, 22, 22);
+  position: absolute;
+  min-width: max-content;
+  bottom: -20px;
+}
+
+.main-info {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.temperature {
+  flex-direction: column;
+}
+
+.description, .date {
+  font-size: 1.3rem;
+  align-self: start;
+  text-align: center;
+}
+
+
+.minmax-temp {
+  font-size: 1rem;
+  color: grey;
+}
+.current-temp {
+  text-align: center;
+  position: relative;
+}
+
+.weather-icon {
+  width: 50px;
+  display: inline-block;
+  position: absolute;
+  right: -70px;
+
+}
+
+.unit-group {
+  margin-left: 1rem;
+  gap: 1rem;
+}
+
+.unit-group button {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 40px;
+  text-align: center;
+  background-color: rgba(168, 168, 168, 0.2);
+  border-radius: 15px;
 }
