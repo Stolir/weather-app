@@ -175,6 +175,10 @@ input:focus {
   gap: 1.5rem;
 }
 
+.address {
+  text-align: center;
+}
+
 .temperature {
   flex-direction: column;
 }
